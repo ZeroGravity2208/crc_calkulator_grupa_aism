@@ -1,8 +1,11 @@
+<!--Projekt: Kalkulator CRC-->
 <!DOCTYPE html>
 <html>
 <title>Crc calculator</title>
 <meta charset="utf-8">
+
 <body>
+	<!--Informacja o projekcie-->
 	<h1>Crc calculator PHP</h1>
 	<h2>Autor: Nazarii Diadyk </h2>
 	<h3>Grupa: AiSM</h3>
@@ -14,7 +17,7 @@
 	$input_file = fopen("plik1.txt", "r")
 		or die("Can`t open this file!");
 	$output_file = fopen("plik2.txt", "a");
-	while (1>0) {
+	while (1 > 0) {
 		$all_data = fread($input_file, 15); #15 symbols for each blocks
 		$crc = crc32($all_data);
 		$crc = dechex($crc); #dechex = Decimal to hexadecimal
@@ -23,7 +26,7 @@
 			break;
 		}
 		echo "<br>"; #breakline for blocks
-		echo $all_data ." ; ". $crc;
+		echo $all_data . " ; " . $crc;
 
 		fwrite($output_file, $all_data . ";" . $crc . ";" . PHP_EOL); #PHP_EOL = '\n'
 	}
@@ -37,7 +40,7 @@
 	$text = "Origin text: ";
 	#taka sama operacja dla sprawdzenia w zadaniu nr2
 	#porównanie wartości pliku
-	while (1>0) {
+	while (1 > 0) {
 		$read = fgets($output_file);
 		$read = explode(";", $read);
 
@@ -64,9 +67,8 @@
 
 	echo "<br>";
 	echo "<br>";
-	echo "All files are save in parent folder->";
 	echo "<br>";
 	?>
 </body>
-
+<footer>All files are saved in parent folder.</footer>
 </html>
