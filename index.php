@@ -8,6 +8,8 @@
 	<h3>Grupa: AiSM</h3>
 	<hr>
 	<h4>Kod zródlowy jest umieściony na stronie GitHub-----></h4>
+	<a href="https://github.com/ZeroGravity2208">Github</a>
+	<br>
 	<?php
 	$input_file = fopen("plik1.txt", "r")
 		or die("Can`t open this file!");
